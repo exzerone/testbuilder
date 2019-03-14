@@ -28,15 +28,15 @@ var detectNetwork = function(cardNumber) {
 	var cardLength = cardNumber.length;
 
   	// Diner's Club
-	if(cardNumber.startsWith('38') && cardLength === 14){
+	if(prefix2 === '38' && cardLength === 14){
 		return 'Diner\'s Club';
-	} else if(cardNumber.startsWith('39') && cardLength === 14){
+	} else if(prefix2 ==='39' && cardLength === 14){
 		return 'Diner\'s Club';
 
 		// American Express
-	} else if(cardNumber.startsWith('34') && cardLength === 15){
+	} else if(prefix2 === '34' && cardLength === 15){
 		return 'American Express';
-	} else if(cardNumber.startsWith('37') && cardLength === 15){
+	} else if(prefix2 ==='37' && cardLength === 15){
 		return 'American Express';
 
 		// China UnionPay
@@ -72,23 +72,23 @@ var detectNetwork = function(cardNumber) {
 		return 'Switch';
 
 		// Visa
-	}else if(cardNumber.startsWith('4') && cardLength === 13){
+	}else if(prefix1 === '4' && cardLength === 13){
 		return 'Visa';
-	}else if(cardNumber.startsWith('4') && cardLength === 16){
+	}else if(prefix1 === '4' && cardLength === 16){
 		return 'Visa';
-	}else if(cardNumber.startsWith('4') && cardLength === 19){
+	}else if(prefix1 === '4' && cardLength === 19){
 		return 'Visa';
 
 		// MasterCard
-	}else if(cardNumber.startsWith('51') && cardLength === 16){
+	}else if(prefix2 === '51' && cardLength === 16){
 		return 'MasterCard';
-	}else if(cardNumber.startsWith('52') && cardLength === 16){
+	}else if(prefix2 === '52' && cardLength === 16){
 		return 'MasterCard';
-	}else if(cardNumber.startsWith('53') && cardLength === 16){
+	}else if(prefix2 === '53' && cardLength === 16){
 		return 'MasterCard';
-	}else if(cardNumber.startsWith('54') && cardLength === 16){
+	}else if(prefix2 === '54' && cardLength === 16){
 		return 'MasterCard';
-	}else if(cardNumber.startsWith('55') && cardLength === 16){
+	}else if(prefix2 === '55' && cardLength === 16){
 		return 'MasterCard';
 
 		// Discover always has a prefix of 6011, 644-649, or 65, and a length of 16 or 19.
@@ -100,8 +100,4 @@ var detectNetwork = function(cardNumber) {
 	}
 
 
- 
-  
-
-  // Once you've read this, go ahead and try to implement this function, then return to the console.
 };
